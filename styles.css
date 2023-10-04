@@ -47,12 +47,12 @@ section {
   padding: 10px;
 }
 
-.scoreboard {
+.score {
   font-size: 3em;
   font-weight: bold;
 }
 
-.score {
+.scoreboard {
   padding: 30px;
   height: auto;
   border-radius: 20px;
@@ -66,17 +66,16 @@ section {
   margin: 0 30px;
 }
 
-#team1 {
+#ind_scoreboard {
   display: inline-block;
   background-color: #005fa2;
 }
 
-#team2 {
+#pak_scoreboard {
   display: inline-block;
   background-color: #1fa83d;
 }
 
-#team1-superover,
-#team2-superover {
+#ball_div {
   margin: 20px;
 }
