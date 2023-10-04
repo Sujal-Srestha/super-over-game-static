@@ -81,4 +81,5 @@ function gameOver() {
     if (team2score === team1score) {
         alert("It is anothe superover!");
     }
+    window.location.reload();
 }
