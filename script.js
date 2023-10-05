@@ -7,6 +7,10 @@ const $team2wickets = document.getElementById("pak_wickets");
 const $strikeButton = document.getElementById("strike");
 const $resetButton = document.getElementById("reset");
 
+/* Audio Files */
+const strikeAudio = new Audio("http://bit.ly/so-ball-hit");
+const gameOverAudio = new Audio("http://bit.ly/so-crowd-cheer");
+
 /* setting initial scores and wickets */
 var team1score =  0;
 var team2score =  0;
@@ -27,6 +31,9 @@ $resetButton.onclick = () => {
 
 /* update score function */
 $strikeButton.onclick= () => {
+    //play audio
+  strikeAudio.currentTime = 0;
+  strikeAudio.play();
     const score = possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length)];
 
     /* for indian team */
@@ -72,6 +79,7 @@ $strikeButton.onclick= () => {
 
 /* result or game over function */
 function gameOver() {
+    gameOverAudio.play();
     if (team1score > team2score) {
         alert("IND wins");
     }
